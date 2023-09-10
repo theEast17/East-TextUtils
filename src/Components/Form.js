@@ -47,9 +47,7 @@ export default function Form(props) {
     }
 
     let copyText=()=>{
-        let text=document.getElementById("myText");
-        text.select();
-        navigator.clipboard.writeText(text.value)
+        navigator.clipboard.writeText(text)
         props.showAlert("Text has been copied","success");
     }
 
@@ -83,14 +81,14 @@ export default function Form(props) {
         <>
         <div className="container mt-4" style={{color:props.mode==="light"?"black":"white"}}>
                 <h2>{props.title}</h2>
-                <textarea className="form-control" rows="7" style={{backgroundColor:props.mode==="light"?"white":"grey",color:props.mode==="light"?"black":"white"}} id="myText" value={text} onChange={textOnchange}></textarea>
-                <button type="button" className="btn btn-primary mt-3" onClick={textUpcase}>UPPERCASE</button>
-                <button type="button" className="btn btn-warning mt-3 mx-1" onClick={textLowcase}>lowercase</button>
-                <button type="button" className="btn btn-primary mt-3" onClick={textSencase}>Sentence case</button>
-                <button type="button" className="btn btn-warning mt-3 mx-1" onClick={textTitcase}>Title Case</button>
-                <button type="button" className="btn btn-primary mt-3" onClick={copyText}>CopyText</button>
-                <button type="button" className="btn btn-warning mt-3 mx-1" onClick={removespace}>RemoveSpace</button>
-                <button type="button" className="btn btn-primary mt-3 mx-1" onClick={textClear}>Clear</button>
+                <textarea className="form-control" rows="7" style={{backgroundColor:props.mode==="light"?"white":"#13466e",color:props.mode==="light"?"black":"white"}} id="myText" value={text} onChange={textOnchange}></textarea>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mt-3" onClick={textUpcase}>UPPERCASE</button>
+                <button disabled={text.length===0} type="button" className="btn btn-warning mt-3 mx-1" onClick={textLowcase}>lowercase</button>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mt-3" onClick={textSencase}>Sentence case</button>
+                <button disabled={text.length===0} type="button" className="btn btn-warning mt-3 mx-1" onClick={textTitcase}>Title Case</button>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mt-3" onClick={copyText}>CopyText</button>
+                <button disabled={text.length===0} type="button" className="btn btn-warning mt-3 mx-1" onClick={removespace}>RemoveSpace</button>
+                <button disabled={text.length===0} type="button" className="btn btn-primary mt-3 mx-1" onClick={textClear}>Clear</button>
                 {/* <button type="button" className="btn btn-warning mt-3" onClick={getLocation}>Get Location</button> */}
         </div>
 

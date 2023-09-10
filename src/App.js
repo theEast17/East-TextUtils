@@ -1,11 +1,11 @@
 import './App.css';
 import Alert from './Components/Alert';
-// import About from './Components/About';
+import About from './Components/About';
 import Form from './Components/Form';
 import Navbar from './Components/Navbar';
 import React, { useState } from 'react';
 
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 // import Test from './Components/Test';
 
 
@@ -46,20 +46,20 @@ export default function App() {
 
   return (
     <>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Navbar title="The East" about="About" modeTitle={dark} mode={darkMode} toggleMode={togglemode} />
         <Alert alert={alert} />
 
         <Routes>
           <Route path="/" element={<Form title="Enter the Text" showAlert={showAlert} mode={darkMode} />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About mode={darkMode}/>} />
         </Routes>
-      </BrowserRouter> */}
+      </BrowserRouter>
 
 
-        <Navbar title="The East" about="About" modeTitle={dark} mode={darkMode} toggleMode={togglemode} />
+        {/* <Navbar title="The East" about="About" modeTitle={dark} mode={darkMode} toggleMode={togglemode} />
         <Alert alert={alert} />
-        <Form title="Enter the Text" showAlert={showAlert} mode={darkMode} />
+        <Form title="Enter the Text" showAlert={showAlert} mode={darkMode} /> */}
 
 
     </>
