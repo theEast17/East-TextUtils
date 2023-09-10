@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/East-TextUtils/static/css/main.8e292a25.css",
+    "main.js": "/East-TextUtils/static/js/main.7445b64a.js",
+    "index.html": "/East-TextUtils/index.html",
+    "main.8e292a25.css.map": "/East-TextUtils/static/css/main.8e292a25.css.map",
+    "main.7445b64a.js.map": "/East-TextUtils/static/js/main.7445b64a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8e292a25.css",
+    "static/js/main.7445b64a.js"
+  ]
+}
